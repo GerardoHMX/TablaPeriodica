@@ -1,0 +1,370 @@
+:root {
+    --font-size-small: 0.7vw;
+    --font-size-medium: 0.8vw;
+    --font-size-large: 1.8vw;
+    --font-size-xlarge: 2vw;
+    --font-size-detail: 1.2vw;
+    --font-size-title: 3.5vw;
+    --padding-small: 0.4vw;
+    --padding-medium: 1rem;
+    --margin-small: 0;
+    --margin-medium: 0.8rem;
+    --margin-large: 50px;
+    --border-radius-small: 0.4vw;
+    --gap-small: 1rem;
+    --gap-medium: 10px;
+    --modal-width: 100vw;
+    --modal-height: 100vh;
+    --modal-content-width: 60vw;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: var(--font-size-medium);
+}
+
+h1 {
+    text-align: center;
+    font-size: var(--font-size-title);
+}
+
+th,
+td,
+.empty-cell {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    box-sizing: content-box;
+    padding: var(--margin-small);
+    margin: var(--margin-small);
+}
+
+.element-box {
+    text-align: center;
+    padding: var(--padding-small);
+    width: calc(5.60 * var(--font-size-medium));
+    height: calc(6.2 * var(--font-size-medium));
+    border-radius: var(--border-radius-small);
+}
+
+.atomic-number,
+.symbol,
+.element-name,
+.atomic-mass {
+    text-align: center;
+    margin-top: var(--margin-small);
+}
+
+.atomic-number {
+    padding-left: var(--margin-small);
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: var(--margin-small);
+}
+
+.symbol {
+    font-size: var(--font-size-large);
+    font-weight: bold;
+    transition: font-size 0.5s ease;
+}
+
+.symbol:hover {
+    font-weight: bolder;
+    font-size: var(--font-size-xlarge);
+}
+
+.element-name,
+.atomic-mass {
+    font-size: var(--font-size-small);
+    font-weight: bold;
+}
+
+.atomic-mass {
+    font-weight: lighter;
+}
+
+.contenedor {
+    height: 100vh;
+    white-space: nowrap;
+    align-content: center;
+    text-align: center;
+}
+
+.contenido {
+    display: inline-block;
+}
+
+#elementDetail {
+    text-align: justify;
+    margin-bottom: var(--font-size-large);
+}
+
+.detalle,
+.row,
+.rowColumn,
+.column {
+    display: grid;
+    gap: .4vw;
+}
+
+.row {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.column>div,
+.detalle>div {
+    font-size: var(--font-size-detail);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: var(--modal-width);
+    height: var(--modal-height);
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: var(--padding-medium);
+    border: 1px solid #888;
+    border-radius: var(--border-radius-small);
+    width: var(--modal-content-width);
+}
+
+.close {
+    color: #aaa;
+    font-size: var(--font-size-large);
+    font-weight: bold;
+}
+
+.closeModal{
+ width: var(--modal-content-width);
+ text-align: right;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Colores */
+.no-metal {
+    background-color: #e2eeff;
+    color: #0060f0;
+}
+
+.metal-alcalinoterreo {
+    background-color: #ffe7e7;
+    color: #d60024;
+}
+
+.metal-alcalino {
+    background-color: #d8f8ff;
+    color: #00758c;
+}
+
+.metal-de-transicion {
+    background-color: #f3e8fd;
+    color: #6232ec;
+}
+
+.otros-metales {
+    background-color: #dff3ff;
+    color: #003355;
+}
+
+.metal,
+.metaloides {
+    background-color: #fef7e0;
+    color: #945700;
+}
+
+.halogeno {
+    background-color: #eaeef0;
+    color: #045d6fc2;
+}
+
+.gas-noble {
+    background-color: #cbffee;
+    color: #049b6a;
+}
+
+.actinidio,
+.actinidios {
+    background-color: #ffe6d4;
+    color: #c73200;
+}
+
+.lantanido,
+.lantanidos {
+    background-color: #dff3ff;
+    color: #003355;
+}
+
+.elemento-desconocido,
+.elementos-desconocidos {
+    background-color: #f0ffa3;
+    color: #3b8b06;
+}
+
+.reference {
+    color: gray;
+}
+
+.cubo {
+    float: right;
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+}
+
+.text {
+    text-align: left;
+}
+
+.detalle .breveDescripcion .desc,
+.detalle .historia .desc,
+.detalle .usos .desc{
+    text-align: left;
+    color: #049b6a;
+}
+
+.detalle .desc {
+    font-weight: bold;
+    text-align: right;
+    width: 45%;
+    text-wrap: auto;
+}
+
+.detalle .numeroAtomico,
+.detalle .simbolo,
+.detalle .elemento,
+.detalle .pesoAtomico,
+.detalle .puntoDeFusion,
+.detalle .puntoDeEbullicion,
+.detalle .faseATemperaturayPresionEstandar,
+.detalle .electronegatividad,
+.detalle .radioAtomico,
+.detalle .radioCovalente,
+.detalle .radioDeVanDerWaals,
+.detalle .radioIonico,
+.detalle .configuracionElectronica,
+.detalle .electronesPorNivel,
+.detalle .estadoDeOxidación,
+.detalle .estructuraCristalina,
+.detalle .energiaDeIonizacion,
+.detalle .electronegatividadDePauling,
+.detalle .afinidadElectronica,
+.detalle .estadosDeOxidacion,
+.detalle .valencia,
+.detalle .grupo,
+.detalle .periodo,
+.detalle .tipo
+{
+    display: flex;
+    gap: var(--gap-medium);
+    text-wrap: auto;
+}
+
+
+.detalle .numeroAtomico .desc{
+    color: #0060f0; 
+}
+
+.detalle .simbolo .desc{
+    color: #00758c; 
+}
+
+.detalle .elemento .desc{
+    color: #003355;
+}
+
+.detalle .pesoAtomico .desc{
+    color: #945700;
+}
+
+.detalle .puntoDeFusion .desc,
+.detalle .puntoDeEbullicion .desc {
+    color: #6232ec;
+}
+
+.detalle .faseATemperaturayPresionEstandar .desc {
+    color: #3b8b06;
+}
+
+.detalle .electronegatividad .desc{
+    color: #045d6fc2;
+}
+
+.detalle .radioAtomico .desc,
+.detalle .radioCovalente .desc,
+.detalle .radioDeVanDerWaals .desc,
+.detalle .radioIonico .desc {
+    color: #003355;
+}
+
+.detalle .configuracionElectronica .desc,
+.detalle .electronesPorNivel .desc,
+.detalle .estadoDeOxidación .desc,
+.detalle .estructuraCristalina .desc,
+.detalle .energiaDeIonizacion .desc,
+.detalle .electronegatividadDePauling .desc,
+.detalle .afinidadElectronica .desc,
+.detalle .estadosDeOxidacion .desc,
+.detalle .valencia .desc,
+.detalle .grupo .desc,
+.detalle .periodo .desc,
+.detalle .tipo .desc  {
+    color: gray; 
+}
+
+.detalle .breveDescripcion,
+.detalle .historia,
+.detalle .usos {
+    font-size: var(--font-size-detail);
+    text-wrap: auto;
+}
+
+.detalle .grupo .desc,
+.detalle .periodo .desc,
+.detalle .tipo .desc {
+    color: #c73200;
+}
+
+/* Elementos de detalle para el modal */
+.element-detail {
+    text-align: center;
+    align-content: center;
+    padding: calc(3* var(--padding-small));
+    border-radius: var(--border-radius-small);
+    margin-right: 10px;
+}
+
+.atomic-number-detail {
+    font-size: calc(3 * var(--font-size-medium));
+    font-weight: bold;
+    text-align: left;
+}
+
+.symbol-detail {
+    font-size: calc(5 * var(--font-size-large));
+    font-weight: bold;
+    transition: font-size 0.5s ease;
+}
+
+.element-name-detail {
+    font-weight: bold;
+}
+
+.element-name-detail,
+.atomic-mass-detail {
+    font-size: calc(4 * var(--font-size-small));
+}
