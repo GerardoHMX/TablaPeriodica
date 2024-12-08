@@ -1,3 +1,10 @@
+.descripcion {
+    font-size: 1.2vm;
+    text-wrap: wrap;
+    padding: 3vw;
+    text-align: justify;
+}
+
 /* Boton*/
 .boton {
     background-color: #4CAF50;
@@ -86,4 +93,5 @@
 .pastas,
 .botanas {
     color: gray;
+    background-color:#fffab6;
 }
