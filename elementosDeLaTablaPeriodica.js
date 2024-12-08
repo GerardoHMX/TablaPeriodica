@@ -22,11 +22,11 @@ verComo.addEventListener("click", function () {
     contenido.innerHTML = "";    
     if(verTablaPeriodica) {
         crearTabla();
-        textoBtn.innerText = "Ver como tabla periódica";
+        textoBtn.innerText = "Ver como tabla de alimentos";        
         textoTitulo.innerText = "Tabla periódica de los elementos químicos";
     } else {
         crearTablaAlimentos();
-        textoBtn.innerText = "Ver como tabla de alimentos";
+        textoBtn.innerText = "Ver como tabla periódica";
         textoTitulo.innerText = "Tabla periódica como alimentos";
     }   
 });
