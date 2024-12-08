@@ -150,6 +150,14 @@ window.onclick = function (event) {
 }
 
 function crearTablaAlimentos() {
+
+    let descripcionDiv = `<br> <div class="descripcion">Para los elementos de la tabla periódica, hacer que el simbolo coincida con alimentos cuyos nombres (o iniciales) coincidan con los símbolos de los elementos químicos.
+    Señalar los grupos y los periodos con números. Todos los elementos contendrán el mismo tipo de información, en el mismo orden y colocación como en la tabla real de la tabla periódica.
+    Agruparemos los alimentos según los principales grupos nutricionales y asignaremos un color específico a cada grupo para facilitar la distinción:
+    Grupos nutricionales: Proteínas, Frutas, Verduras, Pescados, Mariscos, Lácteos, Cereales, Legumbres, Frutos secos, Huevos, Carnes, Embutidos, Postres, Bebidas, Aceites, Otros.
+    En la tabla periódica, para cada elemento se muestra: Nombre del alimento, grupo nutricional, Valor nutricional, Beneficios, Riesgos, calorías, proteínas, grasas, carbohidratos, fibra, vitaminas y minerales.   
+    Asegurarse que los alimentos tengan un grupo nutricional asignado variado y no repetir más de 10 veces.</div>`;
+
     let tabla = "<table>";
     tabla += thead;
     let isFirstTd = false;
@@ -202,7 +210,9 @@ function crearTablaAlimentos() {
         tabla += "</tr>";
     }
     tabla += "</table></tbody>";
+    tabla += descripcionDiv;
     document.getElementById("contenido").innerHTML = tabla;
+    
 }
 
 
@@ -245,3 +255,4 @@ function mostrarAlimento(simbolo) {
         modal.style.display = "block";
     }
 }
+
