@@ -1,0 +1,89 @@
+/* Boton*/
+.boton {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.boton:hover {
+    background-color: #45a049;
+}   
+
+
+/* Colores */
+.cereales {
+    background-color: #e2eeff;
+    color: #0060f0;
+}
+
+.postres {
+    background-color: #ffe7e7;
+    color: #d60024;
+}
+
+.frutas {
+    background-color: #d8f8ff;
+    color: #00758c;
+}
+
+.verduras {
+    background-color: #f3e8fd;
+    color: #6232ec;
+}
+
+.mariscos {
+    background-color: #dff3ff;
+    color: #003355;
+}
+
+.frutossecos,
+.pescados {
+    background-color: #fef7e0;
+    color: #945700;
+}
+
+.lacteos,
+.hierbas {
+    background-color: #eaeef0;
+    color: #045d6fc2;
+}
+
+.hierbas,
+.legumbres,
+.tuberculos {
+    background-color: #cbffee;
+    color: #049b6a;
+}
+
+.legumbres,
+.leguminosas,
+.especias {
+    background-color: #ffe6d4;
+    color: #c73200;
+}
+
+.bebidas,
+.dulces,
+.comidarapida {
+    background-color: #dff3ff;
+    color: #003355;
+}
+
+.carnes,
+.panaderia {
+    background-color: #f0ffa3;
+    color: #3b8b06;
+}
+
+.pastas,
+.botanas {
+    color: gray;
+}
