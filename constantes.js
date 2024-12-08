@@ -3420,12 +3420,6 @@ const elementos = [
 ];
 
 const thead = `<thead>
-<tr>
-    <!--th></th-->
-    <th colspan="18">
-        <h1>Tabla periódica de los elementos</h1>
-    </th>
-</tr>
 <!--tr class="reference">
     <th></th>
     <th></th>
